@@ -1,0 +1,117 @@
+{
+  "editor.minimap.enabled": false,
+    "window.nativeTabs": true,
+    "window.title": "${activeEditorLong}",
+    "eslint.enable": true, //Enable eslint
+    "eslint.options": {
+    "extensions": [ //List of file extensions to activate eslint
+      ".html",
+      ".js",
+      ".vue",
+      ".jsx"
+      ]
+    },
+    "eslint.validate": [{ //list of extensions to validate
+      "language": "html",
+      "autoFix": true
+    },
+    {
+      "language": "vue",
+      "autoFix": true //Autofix any fixable errors when linting
+    },
+    {
+      "language": "javascript",
+      "autoFix": true
+    },
+    {
+      "language": "javascriptreact",
+      "autoFix": true
+    }
+    ],
+    // Run the linter on save (onSave) or on type (onType)
+    "eslint.run": "onType",
+    "eslint.autoFixOnSave": true, //Autofix any fixable errors when linting
+    "beautify.language": {
+      "js": {
+        "type": [
+          "javascript",
+          "json"
+        ],
+        "filename": [
+          ".jshintrc",
+          ".jsbeautify"
+        ]
+      },
+      "css": [
+        "css",
+        "scss"
+      ],
+      "html": [
+        "htm",
+        "html",
+        "vue"
+      ]
+    },
+    "files.exclude": {
+		"**/.DS_Store": true,
+		"**/.git": true,
+		"**/.hg": true,
+		"**/.map": true,
+		"**/.svn": true,
+		"**/.tmp": true,
+		"**/bower_components": true,
+		"**/cache": true,
+		"**/CVS": true,
+		"**/deprecated": true,
+		"**/node_modules": false
+    },
+	"workbench.colorTheme": "Cobalt2",
+    "workbench.colorCustomizations": {
+      "activityBarBadge.background": "#00BCD4",
+      "list.activeSelectionForeground": "#00BCD4",
+      "list.inactiveSelectionForeground": "#00BCD4",
+      "list.highlightForeground": "#00BCD4",
+      "scrollbarSlider.activeBackground": "#00BCD450",
+      "editorSuggestWidget.highlightForeground": "#00BCD4",
+      "textLink.foreground": "#00BCD4",
+      "progressBar.background": "#00BCD4",
+      "pickerGroup.foreground": "#00BCD4",
+      "tab.activeBorder": "#00BCD4"
+    },
+    "materialTheme.cache.workbench.settings": {
+      "accent": "Cyan",
+      "themeColours": "Darker",
+      "accentPrevious": "Blue"
+    },
+    "sublimeTextKeymap.promptV3Features": false,
+    "editor.multiCursorModifier": "ctrlCmd",
+    "editor.formatOnPaste": true,
+	"csscomb.formatOnSave": true,
+	"editor.colorDecorators": true,
+	"editor.cursorBlinking": "phase",
+	"editor.detectIndentation": false,
+	"editor.emptySelectionClipboard": false,
+	"editor.find.seedSearchStringFromSelection": true,
+	"editor.fontFamily": "Fira Code",
+	"editor.fontLigatures": true,
+	"editor.fontSize": 13,
+	"editor.insertSpaces": false,
+	"editor.lineHeight": 25,
+	"editor.renderWhitespace": "boundary",
+	"editor.showFoldingControls": "mouseover",
+	"editor.snippetSuggestions": "top",
+	"editor.tabSize": 4,
+	"editor.wordWrap": "on",
+	"emmet.triggerExpansionOnTab": true,
+		"files.insertFinalNewline": true,
+		"files.trimTrailingWhitespace": true,
+		"git.autofetch": true,
+		"[git-commit]": {
+			"editor.rulers": [
+				50
+			]
+		},
+		"window.zoomLevel": -1,
+		"workbench.activityBar.visible": true,
+		"workbench.iconTheme": "vs-seti"
+  }
