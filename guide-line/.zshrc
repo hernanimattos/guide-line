@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/hernanimattos/.oh-my-zsh"
+export ZSH="/Users/front-ip/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -63,9 +63,11 @@ ZSH_THEME="agnoster"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-git
-zsh-syntax-highlighting
-zsh-autosuggestions
+  git
+ zsh-completions
+ zsh-autosuggestions
+ zsh-syntax-highlighting
+ history history-substring-search
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -98,22 +100,17 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias monit="pm2 monit"
-alias sec="cd ~/Documents/secure/"
-alias sc="cd ~/Documents/secure/secure-core && yarn dev"
-alias docs="cd ~/Documents"
-alias sgql="cd ~/Documents/secure/secure-core && yarn start:dev" 
+alias init="open -a webstorm && sec"
+alias sc="cd ~/Documents/secure/secure-core"
+alias sec="cd ~/Documents/secure"
 
 prompt_context() {
   if [[ "$USER" != "$DEFAULT_USER" || -n "$SSH_CLIENT" ]]; then
-#    prompt_segment black default "%(!.%{%F{yellow}%}.)$USER"
+    prompt_segment black default "%(!.%{%F{yellow}%}.)$USER"
   fi
 }
 
-# [ -f ~/.fzf.bash ] && source ~/.fzf.bash
-
+unset npm_config_prefix # Add this line
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-
